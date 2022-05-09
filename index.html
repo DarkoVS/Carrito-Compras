@@ -24,7 +24,7 @@
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact"
-                    type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
+                    type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Carrito</button>
             </li>
         </ul>
 
@@ -54,7 +54,7 @@
                 </div>
                 <div class="col d-flex justify-content-center-mb-4">
                     <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
-                        <h5 class="card-title pt-2 text-center text-primary">Hamburguesa</h5>
+                        <h5 class="card-title pt-2 text-center text-primary">Hamburguesa 2</h5>
                         <img src="./img/Hamburguesa-1.jpg" class="card-img-top" alt="...">
                         <div class="card-body ">
 
@@ -69,7 +69,7 @@
                 </div>
                 <div class="col d-flex justify-content-center mb-4">
                     <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
-                        <h5 class="card-title pt-2 text-center text-primary">Hamburguesa</h5>
+                        <h5 class="card-title pt-2 text-center text-primary">Hamburguesa 3</h5>
                         <img src="./img/Hamburguesa-1.jpg" class="card-img-top" alt="...">
                         <div class="card-body ">
 
@@ -84,7 +84,7 @@
                 </div>
                 <div class="col d-flex justify-content-center mb-4">
                     <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
-                        <h5 class="card-title pt-2 text-center text-primary">Hamburguesa</h5>
+                        <h5 class="card-title pt-2 text-center text-primary">Hamburguesa 4</h5>
                         <img src="./img/Hamburguesa-1.jpg" class="card-img-top" alt="...">
                         <div class="card-body ">
 
@@ -99,7 +99,7 @@
                 </div>
                 <div class="col d-flex justify-content-center mb-4">
                     <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
-                        <h5 class="card-title pt-2 text-center text-primary">Hamburguesa</h5>
+                        <h5 class="card-title pt-2 text-center text-primary">Hamburguesa 5</h5>
                         <img src="./img/Hamburguesa-1.jpg" class="card-img-top" alt="...">
                         <div class="card-body ">
 
@@ -114,7 +114,7 @@
                 </div>
                 <div class="col d-flex justify-content-center mb-4">
                     <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
-                        <h5 class="card-title pt-2 text-center text-primary">Hamburguesa</h5>
+                        <h5 class="card-title pt-2 text-center text-primary">Hamburguesa 6</h5>
                         <img src="./img/Hamburguesa-1.jpg" class="card-img-top" alt="...">
                         <div class="card-body ">
 
@@ -129,7 +129,7 @@
                 </div>
                 <div class="col d-flex justify-content-center mb-4">
                     <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
-                        <h5 class="card-title pt-2 text-center text-primary">Hamburguesa</h5>
+                        <h5 class="card-title pt-2 text-center text-primary">Hamburguesa 7</h5>
                         <img src="./img/Hamburguesa-1.jpg" class="card-img-top" alt="...">
                         <div class="card-body ">
 
@@ -144,7 +144,7 @@
                 </div>
                 <div class="col d-flex justify-content-center mb-4">
                     <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
-                        <h5 class="card-title pt-2 text-center text-primary">Hamburguesa</h5>
+                        <h5 class="card-title pt-2 text-center text-primary">Hamburguesa 8</h5>
                         <img src="./img/Hamburguesa-1.jpg" class="card-img-top" alt="...">
                         <div class="card-body ">
 
@@ -160,37 +160,42 @@
         </div>
 
 
-        <div class="tab-pane fade " id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+        <div class="tab-pane fade carrito " id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
             <br>
             <table class="table table table-dark table-striped">
                 <thead>
-                    <tr>
+                    <tr class="text-primary">
                         <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">Productos</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
+                        <td class="table__productos">
+                            <img src="./img/Hamburguesa-2.jpg" alt="">
+                            <h6 class="title">Title</h6>
+                        </td>
+                        <td class="table__precio"><p>$5</p></td>
+                        <td class="table__cantidad">
+                            <input type="number" min="1" value="1">
+                            <button class="delete btn-danger">x</button>
+                        </td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                   
                 </tbody>
             </table>
+            <br><br>
+            <div class="row mx-4">
+                <div class="col">
+                    <h3 class="itemCartTotal text-white ">Total: 0</h3>
+                    <div class="col d-flex justify-content-end">
+                        <button class="btn btn-success">COMPRAR</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <footer class="bg-dark p-3 mt-5">
             <p class="text-center m-0 text-muted">Carrito compras vanilla JS</p>
