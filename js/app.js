@@ -33,9 +33,10 @@ const inputElemento = tbody.getElementsByClassName("inputElemento")
     for (let i = 0; i < carrito.length; i++) {
 if (carrito[i].title.trim() === newItem.title.trim()) {
     carrito[i].cantidad ++;
-    const inputValue = inputElemento[i].value
+    const inputValue = inputElemento[i]
     inputValue.value++;
-    console.log(carrito);
+    carritoTotal()
+    
     return null
     
 }
@@ -66,5 +67,30 @@ function renderCarrito() {
         `;
         tr.innerHTML = Content
         tbody.append(tr)
+        tr.querySelector(".delete").addEventListener("click",removeItemCarrito)
   });
+  carritoTotal()
+}
+
+function carritoTotal() {
+    let total = 0 
+    const itemCartTotal = document.querySelector(".itemCartTotal")
+    carrito.forEach((item => {
+        const precio = Number(item.precio.replace("$",""))
+        total = total + precio*item.cantidad 
+    }))
+    itemCartTotal.innerHTML= `Total $${total}`
+}
+
+function removeItemCarrito (e) {
+const buttonDelete = e.target
+const tr = buttonDelete.closest(".itemCarrito")
+const title = tr.querySelector(".title").textContent
+for (let i = 0 ; i<carrito.length; i++){
+    if(carrito[i].title.trim() === title.trim()){
+        carrito.splice(i,1)
+    }
+}
+tr.remove()
+carritoTotal()
 }
