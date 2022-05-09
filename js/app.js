@@ -26,6 +26,13 @@ function addToCarritoItem(e) {
 
 function addItemCarrito(newItem) {
 
+
+    const alert = document.querySelector(".alert")
+    setTimeout(function(){
+        alert.classList.add("hide")
+    },2000)
+    alert.classList.remove("hide")
+
 const inputElemento = tbody.getElementsByClassName("inputElemento")
 
 
@@ -93,6 +100,12 @@ for (let i = 0 ; i<carrito.length; i++){
         carrito.splice(i,1)
     }
 }
+const alert = document.querySelector(".remove")
+setTimeout(function(){
+    alert.classList.add("remove")
+},2000)
+alert.classList.remove("remove")
+
 tr.remove()
 carritoTotal()
 }
