@@ -68,6 +68,7 @@ function renderCarrito() {
         tr.innerHTML = Content
         tbody.append(tr)
         tr.querySelector(".delete").addEventListener("click",removeItemCarrito)
+        tr.querySelector(".inputElemento").addEventListener("change",sumaCantidad)
   });
   carritoTotal()
 }
@@ -80,6 +81,7 @@ function carritoTotal() {
         total = total + precio*item.cantidad 
     }))
     itemCartTotal.innerHTML= `Total $${total}`
+    addLocalStorage()
 }
 
 function removeItemCarrito (e) {
@@ -93,4 +95,27 @@ for (let i = 0 ; i<carrito.length; i++){
 }
 tr.remove()
 carritoTotal()
+}
+
+ function sumaCantidad(e) {
+    const sumaInput = e.target
+    const tr =  sumaInput.closest(".itemCarrito")
+    const title = tr.querySelector(".title").textContent
+    carrito.forEach(item => {
+        if (item.title.trim()=== title){
+            sumaInput.value < 1? (sumaInput.value = 1) : sumaInput.value
+            item.cantidad = sumaInput.value
+            carritoTotal()
+        }
+    })
+}
+ function addLocalStorage () {
+     localStorage.setItem("carrito",JSON.stringify(carrito))
+ }
+window.onload = function() {
+    const storage = JSON.parse (localStorage.getItem("carrito"))
+    if (storage) {
+        carrito = storage
+        renderCarrito()
+    }
 }
