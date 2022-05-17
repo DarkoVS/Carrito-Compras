@@ -132,3 +132,14 @@ window.onload = function() {
         renderCarrito()
     }
 }
+
+const btn = document.querySelector('#comprar')
+btn.addEventListener('click', () => {
+
+    Swal.fire({
+        title: 'Genial!',
+        text: 'Gracias por tu compra!',
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+})
+})
